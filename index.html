@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uz" data-bg="aurora" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark light">
+<title>GAME HUB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/game.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<!-- Umumiy SVG ta'riflar: gradientlar bir marta e'lon qilinadi, artwork va logotip ularga murojaat qiladi -->
+<svg class="defs" width="0" height="0" aria-hidden="true"><defs>
+ <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35b6ff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+ <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".65"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="sk-mafia" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0b44"/><stop offset=".55" stop-color="#5b2bd9"/><stop offset="1" stop-color="#e0407a"/></linearGradient>
+ <linearGradient id="sk-space" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050a2e"/><stop offset=".6" stop-color="#2236c9"/><stop offset="1" stop-color="#7a3dff"/></linearGradient>
+ <linearGradient id="sk-kingdom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1d08"/><stop offset=".55" stop-color="#c46b17"/><stop offset="1" stop-color="#ffcf5c"/></linearGradient>
+ <linearGradient id="sk-detective" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04222b"/><stop offset=".6" stop-color="#0f6e8c"/><stop offset="1" stop-color="#3ad0c4"/></linearGradient>
+ <linearGradient id="sk-island" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a9bd6"/><stop offset=".6" stop-color="#4fd1c5"/><stop offset="1" stop-color="#9bf06a"/></linearGradient>
+ <radialGradient id="sh-ball" cx=".32" cy=".28" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient>
+ <symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="19" fill="url(#lg1)"/>
+  <g fill="#fff" fill-opacity=".96"><rect x="9" y="19" width="46" height="24" rx="12"/><circle cx="21" cy="40" r="9"/><circle cx="43" cy="40" r="9"/></g>
+  <path d="M22 25v10M17 30h10" stroke="#3b6fe0" stroke-width="3.2" stroke-linecap="round" fill="none"/><circle cx="41" cy="28" r="2.8" fill="#8b5cf6"/><circle cx="47" cy="33" r="2.8" fill="#2fb4ff"/>
+  <rect width="64" height="34" rx="19" fill="url(#lg2)"/><rect x=".5" y=".5" width="63" height="63" rx="18.5" fill="none" stroke="#fff" stroke-opacity=".5"/></symbol>
+</defs></svg>
+
+<div class="wall"></div>
+<div id="app">
+  <section class="tab on" data-t="home"></section>
+  <section class="tab" data-t="games"></section>
+  <section class="tab" data-t="friends"></section>
+  <section class="tab" data-t="rating"></section>
+  <section class="tab" data-t="profile"></section>
+  <nav id="tb" class="tabbar" aria-label="Asosiy navigatsiya"></nav>
+</div>
+<div id="ct" aria-hidden="true"><span></span></div>
+<div id="pages"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/games.js"></script>
+<script src="js/net.js"></script>
+<script src="js/app.js"></script>
+<script src="js/room.js"></script>
+<script>App.start();</script>
+</body>
+</html>
